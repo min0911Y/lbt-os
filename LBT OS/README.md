@@ -1,9 +1,9 @@
-#Kardow OS　项目文档
-##function.inc(包括其他库文件)
-###printf  函数
+# Kardow OS　项目文档
+## function.inc(包括其他库文件)
+### printf  函数
 此函数就是字面意思 c标准库函数 用法: DX寄存器存放字符串地址
 
-###input   函数
+### input   函数
 此函数是为开发者封装好的输入函数 免去了在汇编中对于删除 退格 保存字符串的烦恼 用法如下 将BX寄存器设置为需要保存的字符串地址
 使用实例：
 ```
@@ -38,12 +38,12 @@ call com_cmp
 cmp cx,1
 je right
 ```
-###endl
+### endl
 换行
 直接调用即可
-###pause_Show  函数
+### pause_Show  函数
 此函数模仿了dos中的pause 会打印"Press any key to continue . . ."然后等待键盘 返回
-###get_str_length 函数
+### get_str_length 函数
 此函数的用途就是把一个以“$”结尾的字符串的长度给到DI寄存器
 
 入口参数：
@@ -54,7 +54,7 @@ BX  = 字符串地址
 
 DI = 字符串长度
 
-##项目编码规范
+## 项目编码规范
 + 可以没有注释 但是函数不能没有入口及出口参数的说明
 + 变量名称需要做到一目了然 如果做不到 请添加注释
 + 变量名禁止使用中文
